@@ -1,14 +1,14 @@
 #!/usr/bin/python
-import time #импортируем библиотеку для работы со временем, в нашем случае мы будем ждать секунду после записи
+import time
 
-file_path = "numbers.txt" #файл, в который будут записываться числа
-counter = 1 # начинаем счет чисел с единицы
+file_path = "numbers.txt" 
 
-def write_numbers(): # определяем функцию write_numbers
-    while True: #это означает бесконечное выполнение в цикле.
-        with open(file_path, "a") as file: #открываем наш файл на запись
-            file.write(str(counter) + "\n") #записываем число и ставим перевод строки
-            counter += 1 # увеличиваем число на 1
-        time.sleep(1) # ждем одну секунду
+def write_numbers(): 
+    counter = 1 
+    while True: 
+        with open(file_path, "a") as file: 
+            file.write(str(counter) + "\n") 
+            counter += 1 
+        time.sleep(1) 
 
-write_numbers() # вызываем нашу функцию
+write_numbers() 
